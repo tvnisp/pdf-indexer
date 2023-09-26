@@ -1,0 +1,23 @@
+{
+  "name": "pdf-indexer",
+  "version": "1.0.0",
+  "scripts": {
+    "index-pdf": "ts-node scripts/pdfIndexer/extractPDFInfo.ts | pino-pretty && node scripts/pdfIndexer/parse2json.mjs"
+  },
+  "description": "Downloads and indexes pdfs from Contentful",
+  "main": "index.js",
+  "author": "Panagiotis Gkionis",
+  "license": "MIT",
+  "dependencies": {
+    "contentful": "9.1.28",
+    "pino": "^8.15.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.7.0",
+    "dotenv": "^16.3.1",
+    "pdf2json": "3.0.1",
+    "pino-pretty": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "typescript": "4.6.4"
+  }
+}
